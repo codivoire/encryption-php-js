@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "npx mix",
+        "watch": "npx mix watch",
+        "watch:hot": "npx mix watch --hot",
+        "build": "npx mix --production"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.18.6",
+        "@types/crypto-js": "^4.1.1",
+        "@types/node-forge": "^1.3.1",
+        "@types/uuid": "^9.0.0",
+        "axios": "^1.2.1",
+        "eslint": "^8.29.0",
+        "laravel-mix": "^6.0.49",
+        "laravel-vite-plugin": "^0.7.0",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.56.2",
+        "sass-loader": "^12.6.0",
+        "vite": "^3.0.0"
+    },
+    "dependencies": {
+        "bootstrap": "^5.2.3",
+        "crypto-js": "^4.1.1",
+        "node-forge": "^1.3.1",
+        "react-bootstrap": "^2.7.0",
+        "react-loader-spinner": "^5.3.4",
+        "styled-components": "^5.3.6",
+        "sweetalert2": "^11.4.8",
+        "sweetalert2-react-content": "^5.0.7",
+        "uuid": "^9.0.0"
+    }
+}
