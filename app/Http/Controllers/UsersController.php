@@ -2,26 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Encryption;
 use App\Helpers\ResponseSchema;
-use App\Models\Handshake;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController
 {
-    public function index(Request $request)
+    public function index()
     {
         $response = new ResponseSchema();
-        $uuid = $request->get('uuid');
-        $handshake = Handshake::notExpires($uuid)->first();
 
         $users = User::get()->all();
         $response->data = $users;
 
-        $payload = Encryption::encrypt(json_encode($response->toArray()), $handshake->shared_key);
-
-        return response()->json(['payload' => $payload]);
+        return $response;
     }
 
     public function show(int $id)

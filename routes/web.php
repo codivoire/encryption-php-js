@@ -25,7 +25,7 @@ Route::prefix('auth')->group(function () {
 });
 
 
-Route::middleware(['decrypt'])->group(function () {
+Route::middleware(['encrypt', 'decrypt'])->group(function () {
     Route::match(['GET', 'POST'], '/users', [UsersController::class, 'index']);
     Route::get('/users/{id}', [UsersController::class, 'show']);
     Route::post('/users/store', [UsersController::class, 'store']);
